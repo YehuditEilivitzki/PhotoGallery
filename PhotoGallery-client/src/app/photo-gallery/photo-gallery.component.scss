@@ -1,0 +1,35 @@
+.page {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 500px;
+}
+.photo {
+    padding: 15px;
+    height: 150px;
+    width: 150px;
+
+}
+.photo:hover{
+    cursor: pointer;
+}
+.pagination-button {
+    align-self: center;
+}
+.select {
+    margin-top: 20px;
+    margin-inline: 20px;
+}
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttons {
+    margin: 10px;
+}

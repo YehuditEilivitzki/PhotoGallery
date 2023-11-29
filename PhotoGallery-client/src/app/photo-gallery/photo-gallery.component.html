@@ -1,0 +1,27 @@
+<div class="page">
+<button mat-flat-button color="primary" class="pagination-button" [disabled]="currentPage<=1"
+ (click)="getPrevPhotos()"> < prev</button>
+  <div class="gallery">
+    <div>
+    <mat-form-field class="select">
+        <mat-label>select category</mat-label>
+        <mat-select  [formControl]="category"  (selectionChange)="getPhotoByCategory()">
+            <mat-option *ngFor="let category of categoryList" [value]="category" >
+                {{category}}</mat-option>
+        </mat-select>
+      </mat-form-field>  
+      <button mat-flat-button color="primary" 
+      (click)="sortPhotosById()">sort by id
+     </button>
+    </div>
+    <div class="gallery-container" >
+        <img  *ngFor="let photo of photosArr"
+         src={{photo.previewURL}} class="photo" 
+        (click)="displayPhotoDetails(photo.id)">  
+  </div>
+ </div>
+
+  <button mat-flat-button color="primary" class="pagination-button" 
+  [disabled]="photosArr.length<9"
+  (click)="getNextPhotos()" >   next ></button>    
+  </div>
